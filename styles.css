@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300&display=swap');
+
+body {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: #FAE8EB;
+}
+
+.tarjetero {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: inherit;
+    align-items: inherit;
+}
+
+.tarjeta {
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80%;
+    border-radius: 30px;
+    color: #FAE8EB;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+}
+
+.tarjeta h2 {
+    font-size: 24px;
+    position: absolute;
+    left: 40px;
+    top: 30px;
+    margin: 0;
+    opacity: 0;
+}
+
+.tarjeta.active {
+    flex: 5;
+}
+
+.tarjeta.active h2 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0s;
+}
+
+@media (max-width: 480px) {
+    .tarjetero {
+        width: 100%;
+    }
+}
